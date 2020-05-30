@@ -13,7 +13,7 @@ body {
 /* Grid section */
 
 
-
+/* Name */
 .Name-section {
   grid-column: 1/5;
   Font-size: 30px;
@@ -33,12 +33,16 @@ body {
   font-weight: bold;
 }
 
+/* Grid Setup */
+
 .Grid {
   margin-bottom: auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(195px, 1fr));
   grid-template-rows: 100px repeat(4, minmax(195px, 1fr));
 }
+
+/* Type Setup */
 
 .type {
   position: relative;
