@@ -21,7 +21,7 @@ button {
   border: none;
   display: inline-block;
   transition: all 0.4s ease 0s;
-  height: 100%;
+  height: 139px;
   width: 90%;
   font-size: 30px;
 }
@@ -153,17 +153,19 @@ button:hover {
   grid-template-rows: auto auto;
 }
 
-.CF-section {
+.CF-section  {
   border-right: solid;
   border-bottom: solid;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-    padding: 10px;
+  padding: 10px;
+  align-items: center;
 }
 
 .CF-Center {
   text-align: center;
+  height: 190px;
 }
 
 .Quadra-section {
@@ -171,7 +173,8 @@ button:hover {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   border-right: solid;
-    padding: 10px;
+  padding: 10px;
+  align-items: center;
 }
 
 .quadra {
