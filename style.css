@@ -32,13 +32,16 @@ button:hover {
   border-color: #3bc1f6 !important;
   transition: all 0.4s ease 0s;
 }
+
+.color {
+  color: red;
+  font-size: 70px !important;
+}
+
+
 /* Grid section */
 
-/* Name */
-/* .Name-section {
-  grid-column: 1/5;
-  font-size: 30px;
-} */
+
 
 .name-bar {
   grid-column: 1/4;
@@ -97,6 +100,7 @@ button:hover {
   font-weight: normal;
   text-align: center;
   font-family: sans-serif;
+  transition: ease-in-out all 0.4s;
 }
 
 .type-des {

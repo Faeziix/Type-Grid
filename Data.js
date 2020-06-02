@@ -18,6 +18,7 @@ const Q = {
   Wayferer: ["Se-Ni", "Te-Fi"],
   Philosopher: ["Si-Ne", "Te-Fi"],
 };
+
 const TypesData = [
   {
     id: 1,
@@ -132,5 +133,6 @@ const TypesData = [
     Quadra: Q.Philosopher,
   },
 ];
+
 
 export default TypesData;

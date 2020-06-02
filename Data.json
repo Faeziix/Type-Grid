@@ -1,0 +1,116 @@
+{
+  "TypesData": [
+    {
+      "id": 1,
+      "type": "ESTJ",
+      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "Temperament": ["Affiliative", "Concrete", "Systematic"],
+      "Quadra": ["Si-Ne", "Te-Fi"]
+    },
+    {
+      "id": 2,
+      "type": "ESTP",
+      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "Temperament": ["Pragmatic", "Concrete", "Intrest"],
+      "Quadra": ["Se-Ni", "Ti-Fe"]
+    },
+    {
+      "id": 3,
+      "type": "ENTJ",
+      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "Temperament": ["Pragmatic", "Abstract", "Systematic"],
+      "Quadra": ["Se-Ni", "Te-Fi"]
+    },
+    {
+      "id": 4,
+      "type": "ENFJ",
+      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "Temperament": ["Affiliative", "Abstract", "Intrest"],
+      "Quadra": ["Se-Ni", "Ti-Fe"]
+    },
+    {
+      "id": 5,
+      "type": "ESFJ",
+      "InteractionStyle": ["Informative", "Initiating", "Movement"],
+      "Temperament": ["Affiliative", "Concrete", "Systematic"],
+      "Quadra": ["Si-Ne", "Ti-Fe"]
+    },
+    {
+      "id": 6,
+      "type": "ESFP",
+      "InteractionStyle": ["Informative", "Initiating", "Movement"],
+      "Temperament": ["Pragmatic", "Concrete", "Intrest"],
+      "Quadra": ["Se-Ni", "Te-Fi"]
+    },
+    {
+      "id": 7,
+      "type": "ENTP",
+      "InteractionStyle": ["Informative", "Initiating", "Movement"],
+      "Temperament": ["Pragmatic", "Abstract", "Systematic"],
+      "Quadra": ["Si-Ne", "Ti-Fe"]
+    },
+    {
+      "id": 8,
+      "type": "ENFP",
+      "InteractionStyle": ["Informative", "Initiating", "Movement"],
+      "Temperament": ["Affiliative", "Abstract", "Intrest"],
+      "Quadra": ["Si-Ne", "Te-Fi"]
+    },
+    {
+      "id": 9,
+      "type": "ISTJ",
+      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "Temperament": ["Affiliative", "Concrete", "Systematic"],
+      "Quadra": ["Si-Ne", "Te-Fi"]
+    },
+    {
+      "id": 10,
+      "type": "ISTP",
+      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "Temperament": ["Pragmatic", "Concrete", "Intrest"],
+      "Quadra": ["Se-Ni", "Ti-Fe"]
+    },
+    {
+      "id": 11,
+      "type": "INTJ",
+      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "Temperament": ["Pragmatic", "Abstract", "Systematic"],
+      "Quadra": ["Se-Ni", "Te-Fi"]
+    },
+    {
+      "id": 12,
+      "type": "INFJ",
+      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "Temperament": ["Affiliative", "Abstract", "Intrest"],
+      "Quadra": ["Se-Ni", "Ti-Fe"]
+    },
+    {
+      "id": 13,
+      "type": "ISFJ",
+      "InteractionStyle": ["Informative", "Responding", "Control"],
+      "Temperament": ["Affiliative", "Concrete", "Systematic"],
+      "Quadra": ["Si-Ne", "Ti-Fe"]
+    },
+    {
+      "id": 14,
+      "type": "ISFP",
+      "InteractionStyle": ["Informative", "Responding", "Control"],
+      "Temperament": ["Pragmatic", "Concrete", "Intrest"],
+      "Quadra": ["Se-Ni", "Te-Fi"]
+    },
+    {
+      "id": 15,
+      "type": "INTP",
+      "InteractionStyle": ["Informative", "Responding", "Control"],
+      "Temperament": ["Pragmatic", "Abstract", "Systematic"],
+      "Quadra": ["Si-Ne", "Ti-Fe"]
+    },
+    {
+      "id": 16,
+      "type": "INFP",
+      "InteractionStyle": ["Informative", "Responding", "Control"],
+      "Temperament": ["Affiliative", "Abstract", "Intrest"],
+      "Quadra": ["Si-Ne", "Te-Fi"]
+    }
+  ]
+}
