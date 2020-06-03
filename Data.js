@@ -1,7 +1,7 @@
 const IS = {
-  Structure: ["Direct", "Initiating", "Control"],
+  Structure: ["Control", "Initiating", "Direct"],
   Starter: ["Informative", "Initiating", "Movement"],
-  Finisher: ["Direct", "Responding", "Movement"],
+  Finisher: ["Movement", "Responding", "Direct"],
   BehindTheScene: ["Informative", "Responding", "Control"],
 };
 
@@ -14,12 +14,12 @@ const Temps = {
 
 const Q = {
   Crusader: ["Si-Ne", "Ti-Fe"],
-  Temperamentlar: ["Se-Ni", "Ti-Fe"],
+  templar: ["Se-Ni", "Ti-Fe"],
   Wayferer: ["Se-Ni", "Te-Fi"],
   Philosopher: ["Si-Ne", "Te-Fi"],
 };
 
-const TypesData = [
+let TypesData = [
   {
     id: 1,
     type: "ESTJ",
@@ -32,7 +32,7 @@ const TypesData = [
     type: "ESTP",
     InteractionStyle: IS.Structure,
     Temperament: Temps.Artisan,
-    Quadra: Q.Temperamentlar,
+    Quadra: Q.templar,
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const TypesData = [
     type: "ENFJ",
     InteractionStyle: IS.Structure,
     Temperament: Temps.Idealist,
-    Quadra: Q.Temperamentlar,
+    Quadra: Q.templar,
   },
   {
     id: 5,
@@ -88,7 +88,7 @@ const TypesData = [
     type: "ISTP",
     InteractionStyle: IS.Finisher,
     Temperament: Temps.Artisan,
-    Quadra: Q.Temperamentlar,
+    Quadra: Q.templar,
   },
   {
     id: 11,
@@ -102,7 +102,7 @@ const TypesData = [
     type: "INFJ",
     InteractionStyle: IS.Finisher,
     Temperament: Temps.Idealist,
-    Quadra: Q.Temperamentlar,
+    Quadra: Q.templar,
   },
   {
     id: 13,
@@ -133,6 +133,5 @@ const TypesData = [
     Quadra: Q.Philosopher,
   },
 ];
-
 
 export default TypesData;

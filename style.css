@@ -169,7 +169,6 @@ button:hover {
 
 .CF-Center {
   text-align: center;
-  height: 190px;
 }
 
 .Quadra-section {
@@ -181,7 +180,8 @@ button:hover {
   align-items: center;
 }
 
-.quadra {
+.quadra button{
+  cursor: not-allowed;
   text-align: center;
   justify-content: space-between;
 }
