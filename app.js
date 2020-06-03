@@ -7,11 +7,19 @@ let NewTypes = [];
 
 button.forEach((btns) => {
   btns.addEventListener("click", () => {
+    console.clear();
     let buttonValue = btns.textContent;
     buttonAction(buttonValue);
-    console.log(NewTypes);
+    NewTypes.forEach((i) => {
+      console.log(i.type);
+    });
+
     Types = NewTypes;
     NewTypes = [];
+    if (Types.length === 1) {
+      alert(`Your Type is ${Types[0].type}`)
+      console.clear();
+    }
     if (Types.length === 0) {
       alert("there is no type with this attributes. please try again");
       Types = TypesData.default;
