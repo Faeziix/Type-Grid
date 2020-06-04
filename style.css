@@ -5,10 +5,10 @@
 }
 body {
   display: grid;
-  grid-template-columns: 25% auto 25%;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 10% auto;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   align-items: center;
   overflow: hidden;
 }
@@ -38,10 +38,7 @@ button:hover {
   font-size: 70px !important;
 }
 
-
 /* Grid section */
-
-
 
 .name-bar {
   grid-column: 1/4;
@@ -51,7 +48,7 @@ button:hover {
   margin: 0;
   border-bottom: solid;
   display: grid;
-  grid-template-columns : 90% auto;
+  grid-template-columns: 90% auto;
   justify-content: space-between;
 }
 .reset {
@@ -160,7 +157,7 @@ button:hover {
   grid-template-rows: auto auto;
 }
 
-.CF-section  {
+.CF-section {
   border-right: solid;
   border-bottom: solid;
   display: grid;
@@ -183,8 +180,7 @@ button:hover {
   align-items: center;
 }
 
-.quadra button{
-  cursor: not-allowed;
+.quadra button {
   text-align: center;
   justify-content: space-between;
 }
