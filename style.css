@@ -181,7 +181,6 @@ button:hover {
 }
 
 .quadra button {
-  cursor: not-allowed;
   text-align: center;
   justify-content: space-between;
 }

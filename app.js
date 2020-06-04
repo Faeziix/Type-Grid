@@ -7,11 +7,10 @@ let NewTypes = [];
 
 button.forEach((btns) => {
   btns.addEventListener("click", () => {
-
     console.clear();
-    TypeName.forEach(Name => {
-      Name.classList.remove('color')
-    })
+    TypeName.forEach((Name) => {
+      Name.classList.remove("color");
+    });
 
     let buttonValue = btns.textContent;
     buttonAction(buttonValue);
@@ -22,7 +21,7 @@ button.forEach((btns) => {
     Types = NewTypes;
     NewTypes = [];
     if (Types.length === 1) {
-      alert(`Your Type is ${Types[0].type}`)
+      alert(`Your Type is ${Types[0].type}`);
       console.clear();
     }
     if (Types.length === 0) {
@@ -49,12 +48,17 @@ const buttonAction = (buttonValue) => {
       }
     });
 
-    Types[x].Quadra.forEach((Index) => {
+    Types[x].CF.forEach((Index) => {
       if (buttonValue === Index) {
         NewTypes.push(Types[x]);
         Colorize();
       }
     });
+
+    if (Types[x].Quadra === buttonValue) {
+      NewTypes.push(Types[x]);
+      Colorize();
+    }
 
     function Colorize() {
       TypeName.forEach((Name) => {
