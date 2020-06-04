@@ -51,17 +51,20 @@ button:hover {
   margin: 0;
   border-bottom: solid;
   display: grid;
+  grid-template-columns : 90% auto;
   justify-content: space-between;
-  grid-template-columns: 60% 40%;
 }
-
+.reset {
+  height: auto;
+  width: 100px;
+  margin-right: 50px;
+}
 .Input-style {
   outline: none;
   border: none;
   border-left: solid;
   font-size: 40px;
   color: rgb(112, 141, 150);
-  height: 100%;
   padding-left: 20px;
   text-transform: capitalize;
   font-family: "signika";

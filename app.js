@@ -7,7 +7,12 @@ let NewTypes = [];
 
 button.forEach((btns) => {
   btns.addEventListener("click", () => {
+
     console.clear();
+    TypeName.forEach(Name => {
+      Name.classList.remove('color')
+    })
+
     let buttonValue = btns.textContent;
     buttonAction(buttonValue);
     NewTypes.forEach((i) => {
@@ -33,28 +38,31 @@ const buttonAction = (buttonValue) => {
     Types[x].InteractionStyle.forEach((Index) => {
       if (buttonValue === Index) {
         NewTypes.push(Types[x]);
+        Colorize();
       }
     });
 
     Types[x].Temperament.forEach((Index) => {
       if (buttonValue === Index) {
         NewTypes.push(Types[x]);
+        Colorize();
       }
     });
 
     Types[x].Quadra.forEach((Index) => {
       if (buttonValue === Index) {
         NewTypes.push(Types[x]);
+        Colorize();
       }
     });
 
-    // function Colorize() {
-    //   TypeName.forEach((Name) => {
-    //     if (Name.textContent === Types[x].type) {
-    //       Name.classList.add("color");
-    //     }
-    //   });
-    // }
+    function Colorize() {
+      TypeName.forEach((Name) => {
+        if (Name.textContent === Types[x].type) {
+          Name.classList.add("color");
+        }
+      });
+    }
     // function unColorize() {
     //   TypeName.forEach((Name) => {
 
