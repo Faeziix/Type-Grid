@@ -1,61 +1,77 @@
+
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
+
 body {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 10% auto;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  font-size: 10px;
 }
 
 button {
   color: #494949 !important;
   text-decoration: none;
   background: #ffffff;
-  padding: 10px;
+  padding: 10% 0;
   border: none;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
-  height: 139px;
-  width: 90%;
-  font-size: 30px;
+  display: inline-block; 
+  transition: all 0.4s ease;
+  width: 50%;
+  font-size: 2.5em;
+  text-align: center;
+  /*! margin: auto; */
 }
 
 button:hover {
   color: #ffffff !important;
   background: #3bc1f6;
   border-color: #3bc1f6 !important;
-  transition: all 0.4s ease 0s;
 }
+
+/* Added when button clicked */
 
 .color {
   color: red;
-  font-size: 70px !important;
+  font-size:  3em !important;
+  background-color: white !important;
 }
 
-/* Grid section */
+/*=======
+Main Setup 
+======     */
+
+.TypeGrid-Setup {
+  display: grid;
+  grid-template-areas: "namebar namebar namebar" "sidebarL mainbar sidebarR ";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 10% 1fr;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
 
 .name-bar {
-  grid-column: 1/4;
+  grid-area: namebar;
   border: solid;
   height: 100%;
   width: 100%;
-  margin: 0;
   border-bottom: solid;
   display: grid;
   grid-template-columns: 90% auto;
   justify-content: space-between;
 }
 .reset {
-  height: auto;
-  width: 100px;
-  margin-right: 50px;
+  height: 100%;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  right: 30px;
 }
+
 .Input-style {
   outline: none;
   border: none;
@@ -67,55 +83,83 @@ button:hover {
   font-family: "signika";
 }
 
-.Input-Type {
-  text-transform: uppercase;
-}
-
-/* Grid Setup */
+/*=======
+Grid Setup 
+========   */
 
 .Grid {
-  margin: auto 0;
+  height: 71%;
+  /*! margin: -1px; */
   display: grid;
-  grid-template-columns: repeat(4, minmax(195px, 1fr));
-  grid-template-rows: repeat(4, minmax(195px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-area: mainbar;
+  text-align: right;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  /*! border: ; */
+}
+.section1,
+.section2 {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+
 }
 
-/* Type Setup */
+.section2 {
+  grid-area: sidebarR;
+}
+.section1 {
+  grid-area: sidebarL;
+}
+
+/*=======
+Type Grid Setup 
+=======  */
 
 .type {
-  position: relative;
-  display: grid;
+  /*! position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: black solid 1px;
-  grid-template-rows: repeat(3);
-  background-color: rgb(255, 255, 255);
   color: black;
+  height:100%;
+
+  font-size: 17px;
 }
 
 .TypeName {
+  margin: 10px 0 auto;
   padding: 0;
-  font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   font-family: sans-serif;
   transition: ease-in-out all 0.4s;
+  font-size: 2.3em;
 }
 
-.type-des {
-  font-size: 25px;
-  height: 40px;
+.Type-Des {
+  font-size: 1.7em;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-family: "signika";
+  padding: 10% 0;
+  font-weight: inherit;
 }
 
 .Type-CF-container {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, minmax(25%, auto));
+  height: 20%;
 }
 
 .CF {
@@ -124,10 +168,11 @@ button:hover {
   display: flex;
   color: white;
   text-align: center;
+  padding: 3px 4px;
 }
 
 .CF h2 {
-  font-size: 25px;
+  font-size: 1.1em;
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
 }
@@ -148,62 +193,50 @@ button:hover {
   background-color: rgb(0, 155, 255);
 }
 
-/* left column CF+Quadra */
+/* ==================
+    Sidebar Setup
+===================== */
 
-.section1 {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-rows: auto auto;
+.CF-section,
+.Quadra-section,
+.IS-section,
+.Temp-section {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .CF-section {
-  border-right: solid;
-  border-bottom: solid;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  padding: 10px;
-  align-items: center;
-}
-
-.CF-Center {
-  text-align: center;
+  border-right: solid 2px;
+  border-bottom: solid 2px;
 }
 
 .Quadra-section {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  border-right: solid;
-  padding: 10px;
-  align-items: center;
-}
-
-.quadra button {
-  text-align: center;
-  justify-content: space-between;
-}
-
-/* right column IS+Temp */
-
-.section2 {
-  height: 100%;
-  width: 100%;
-  display: grid;
+  border-right: solid 2px;
+  border-top: solid 2px;
 }
 
 .IS-section {
-  border-bottom: solid;
-  border-left: solid;
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 10px;
+  border-left: solid 2px;
+  border-bottom: solid 2px;
 }
 
 .Temp-section {
-  border-left: solid;
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 10px;
+  border-left: solid 2px;
+  border-top: solid 2px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .TypeGrid-Setup {
+
+    display:grid;
+  grid-template-areas: "namebar namebar "  " mainbar mainbar " " sidebarL  sidebarR";
+  grid-template-rows: auto auto auto ;
+  grid-template-columns: 1fr 1fr  ;
+    overflow: visible;
+}
+  .Input-style {
+    font-size: 20px;
+  }
 }
