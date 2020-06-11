@@ -1,63 +1,58 @@
-import * as TypesData from "./Data.js";
-let Types = TypesData.default;
 const button = document.querySelectorAll(".btn");
 let TypeName = document.querySelectorAll(".TypeName");
-let NewTypes = [];
+const resetBtn = document.querySelector(".reset");
 
-button.forEach((btns) => {
-  btns.addEventListener("click", () => {
-    TypeName.forEach((Name) => {
-      Name.classList.remove("color");
-    });
-    
-    let buttonValue = btns.textContent;
+fetch("./Data.json")
+  .then((response) => response.json())
+  .then((json) => {
+    let NewTypes = [];
+    let TypeContent = json.TypesData;
 
-    buttonAction(buttonValue);
-    Types = NewTypes;
-    NewTypes = [];
+    button.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        TypeName.forEach((i) => i.classList.remove("color"));
+        console.clear();
+        TypeContent.forEach((element) => {
+          element.InteractionStyle.forEach((i) => {
+            if (i === btn.textContent) {
+              NewTypes.push(element);
+              console.log(element.type);
+              TypeName[element.id - 1].classList.add("color");
+            }
+          });
+          element.CF.forEach((i) => {
+            if (i === btn.textContent) {
+              NewTypes.push(element);
+              console.log(element.type);
+              TypeName[element.id - 1].classList.add("color");
+            }
+          });
+          element.Temperament.forEach((i) => {
+            if (i === btn.textContent) {
+              NewTypes.push(element);
+              console.log(element.type);
+              TypeName[element.id - 1].classList.add("color");
+            }
+          });
+          if (element.Quadra === btn.textContent) {
+            NewTypes.push(element);
+            console.log(element.type);
+            TypeName[element.id - 1].classList.add("color");
+          }
+        });
 
-    if (Types.length === 1) {
-      alert(`Your Type is ${Types[0].type}`);
-    } else if (Types.length === 0) {
-      Types = TypesData.default;
-    }
-  });
-});
-
-const buttonAction = (buttonValue) => {
-  for (let x in Types) {
-    Types[x].InteractionStyle.forEach((Index) => {
-      if (buttonValue === Index) {
-        NewTypes.push(Types[x]);
-        Colorize();
-      }
-    });
-
-    Types[x].Temperament.forEach((Index) => {
-      if (buttonValue === Index) {
-        NewTypes.push(Types[x]);
-        Colorize();
-      }
-    });
-
-    Types[x].CF.forEach((Index) => {
-      if (buttonValue === Index) {
-        NewTypes.push(Types[x]);
-        Colorize();
-      }
-    });
-
-    if (Types[x].Quadra === buttonValue) {
-      NewTypes.push(Types[x]);
-      Colorize();
-    }
-
-    function Colorize() {
-      TypeName.forEach((Name) => {
-        if (Name.textContent === Types[x].type) {
-          Name.classList.add("color");
+        TypeContent = NewTypes;
+        NewTypes = [];
+        if (TypeContent.length === 0) {
+          alert("there is no type with this atributes");
+          TypeContent = json.TypesData;
         }
       });
-    }
-  }
-};
+    });
+
+    resetBtn.addEventListener("click", () => {
+      console.clear();
+      TypeContent = json.TypesData;
+      TypeName.forEach((i) => i.classList.remove("color"));
+    });
+  });

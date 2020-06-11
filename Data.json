@@ -3,114 +3,130 @@
     {
       "id": 1,
       "type": "ESTJ",
-      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "InteractionStyle": ["Control", "Initiating", "Direct"],
       "Temperament": ["Affiliative", "Concrete", "Systematic"],
-      "Quadra": ["Si-Ne", "Te-Fi"]
+      "CF": ["Si-Ne", "Te-Fi"],
+      "Quadra": "Philosopher"
     },
     {
       "id": 2,
       "type": "ESTP",
-      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "InteractionStyle": ["Control", "Initiating", "Direct"],
       "Temperament": ["Pragmatic", "Concrete", "Intrest"],
-      "Quadra": ["Se-Ni", "Ti-Fe"]
+      "CF": ["Se-Ni", "Ti-Fe"],
+      "Quadra": "Templar"
     },
     {
       "id": 3,
       "type": "ENTJ",
-      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "InteractionStyle": ["Control", "Initiating", "Direct"],
       "Temperament": ["Pragmatic", "Abstract", "Systematic"],
-      "Quadra": ["Se-Ni", "Te-Fi"]
+      "CF": ["Se-Ni", "Te-Fi"],
+      "Quadra": "Wayferer"
     },
     {
       "id": 4,
       "type": "ENFJ",
-      "InteractionStyle": ["Direct", "Initiating", "Control"],
+      "InteractionStyle": ["Control", "Initiating", "Direct"],
       "Temperament": ["Affiliative", "Abstract", "Intrest"],
-      "Quadra": ["Se-Ni", "Ti-Fe"]
+      "CF": ["Se-Ni", "Ti-Fe"],
+      "Quadra": "Templar"
     },
     {
       "id": 5,
       "type": "ESFJ",
       "InteractionStyle": ["Informative", "Initiating", "Movement"],
       "Temperament": ["Affiliative", "Concrete", "Systematic"],
-      "Quadra": ["Si-Ne", "Ti-Fe"]
+      "CF": ["Si-Ne", "Ti-Fe"],
+      "Quadra": "Crusader"
     },
     {
       "id": 6,
       "type": "ESFP",
       "InteractionStyle": ["Informative", "Initiating", "Movement"],
       "Temperament": ["Pragmatic", "Concrete", "Intrest"],
-      "Quadra": ["Se-Ni", "Te-Fi"]
+      "CF": ["Se-Ni", "Te-Fi"],
+      "Quadra": "Wayferer"
     },
     {
       "id": 7,
       "type": "ENTP",
       "InteractionStyle": ["Informative", "Initiating", "Movement"],
       "Temperament": ["Pragmatic", "Abstract", "Systematic"],
-      "Quadra": ["Si-Ne", "Ti-Fe"]
+      "CF": ["Si-Ne", "Ti-Fe"],
+      "Quadra": "Crusader"
     },
     {
       "id": 8,
       "type": "ENFP",
       "InteractionStyle": ["Informative", "Initiating", "Movement"],
       "Temperament": ["Affiliative", "Abstract", "Intrest"],
-      "Quadra": ["Si-Ne", "Te-Fi"]
+      "CF": ["Si-Ne", "Te-Fi"],
+      "Quadra": "Philosopher"
     },
     {
       "id": 9,
       "type": "ISTJ",
-      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "InteractionStyle": ["Movement", "Responding", "Direct"],
       "Temperament": ["Affiliative", "Concrete", "Systematic"],
-      "Quadra": ["Si-Ne", "Te-Fi"]
+      "CF": ["Si-Ne", "Te-Fi"],
+      "Quadra": "Philosopher"
     },
     {
       "id": 10,
       "type": "ISTP",
-      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "InteractionStyle": ["Movement", "Responding", "Direct"],
       "Temperament": ["Pragmatic", "Concrete", "Intrest"],
-      "Quadra": ["Se-Ni", "Ti-Fe"]
+      "CF": ["Se-Ni", "Ti-Fe"],
+      "Quadra": "Templar"
     },
     {
       "id": 11,
       "type": "INTJ",
-      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "InteractionStyle": ["Movement", "Responding", "Direct"],
       "Temperament": ["Pragmatic", "Abstract", "Systematic"],
-      "Quadra": ["Se-Ni", "Te-Fi"]
+      "CF": ["Se-Ni", "Te-Fi"],
+      "Quadra": "Wayferer"
     },
     {
       "id": 12,
       "type": "INFJ",
-      "InteractionStyle": ["Direct", "Responding", "Movement"],
+      "InteractionStyle": ["Movement", "Responding", "Direct"],
       "Temperament": ["Affiliative", "Abstract", "Intrest"],
-      "Quadra": ["Se-Ni", "Ti-Fe"]
+      "CF": ["Se-Ni", "Ti-Fe"],
+      "Quadra": "Templar"
     },
     {
       "id": 13,
       "type": "ISFJ",
       "InteractionStyle": ["Informative", "Responding", "Control"],
       "Temperament": ["Affiliative", "Concrete", "Systematic"],
-      "Quadra": ["Si-Ne", "Ti-Fe"]
+      "CF": ["Si-Ne", "Ti-Fe"],
+      "Quadra": "Crusader"
     },
     {
       "id": 14,
       "type": "ISFP",
       "InteractionStyle": ["Informative", "Responding", "Control"],
       "Temperament": ["Pragmatic", "Concrete", "Intrest"],
-      "Quadra": ["Se-Ni", "Te-Fi"]
+      "CF": ["Se-Ni", "Te-Fi"],
+      "Quadra": "Wayferer"
     },
     {
       "id": 15,
       "type": "INTP",
       "InteractionStyle": ["Informative", "Responding", "Control"],
       "Temperament": ["Pragmatic", "Abstract", "Systematic"],
-      "Quadra": ["Si-Ne", "Ti-Fe"]
+      "CF": ["Si-Ne", "Ti-Fe"],
+      "Quadra": "Crusader"
     },
     {
       "id": 16,
       "type": "INFP",
       "InteractionStyle": ["Informative", "Responding", "Control"],
       "Temperament": ["Affiliative", "Abstract", "Intrest"],
-      "Quadra": ["Si-Ne", "Te-Fi"]
+      "CF": ["Si-Ne", "Te-Fi"],
+      "Quadra": "Philosopher"
     }
   ]
 }
