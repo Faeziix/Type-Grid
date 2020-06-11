@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +16,10 @@ button {
   background: #ffffff;
   padding: 10% 0;
   border: none;
-  display: inline-block; 
+  display: inline-block;
   transition: all 0.4s ease;
-  width: 50%;
+  width: 100%;
+  height: 80%;
   font-size: 2.5em;
   text-align: center;
   /*! margin: auto; */
@@ -31,11 +31,28 @@ button:hover {
   border-color: #3bc1f6 !important;
 }
 
+.btn-sec {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.btn-sec h2 {
+  position: absolute;
+  left: 45%;
+  top:70%;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /* Added when button clicked */
 
 .color {
   color: red;
-  font-size:  3em !important;
+  font-size: 3em !important;
   background-color: white !important;
 }
 
@@ -107,7 +124,6 @@ Grid Setup
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 1fr;
-
 }
 
 .section2 {
@@ -124,18 +140,16 @@ Type Grid Setup
 .type {
   /*! position: relative; */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-flow: column nowrap;
   border: black solid 1px;
   color: black;
-  height:100%;
-
+  height: 100%;
+  justify-content: space-between;
   font-size: 17px;
 }
 
 .TypeName {
-  margin: 10px 0 auto;
-  padding: 0;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,19 +161,19 @@ Type Grid Setup
 }
 
 .Type-Des {
-  font-size: 1.7em;
+  align-self: center;
+  font-size: 1.4em;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "signika";
-  padding: 10% 0;
   font-weight: inherit;
 }
 
 .Type-CF-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  height: 20%;
+  height: 25%;
 }
 
 .CF {
@@ -172,7 +186,7 @@ Type Grid Setup
 }
 
 .CF h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
 }
@@ -203,8 +217,9 @@ Type Grid Setup
 .Temp-section {
   display: flex;
   padding: 10px;
-  align-items: center;
+  align-items: stretch;
   flex-flow: row wrap;
+  justify-content: center;
 }
 
 .CF-section {
@@ -227,16 +242,22 @@ Type Grid Setup
   border-top: solid 2px;
 }
 
+
+
 @media only screen and (max-width: 1100px) {
   .TypeGrid-Setup {
-
-    display:grid;
-  grid-template-areas: "namebar namebar "  " mainbar mainbar " " sidebarL  sidebarR";
-  grid-template-rows: auto auto auto ;
-  grid-template-columns: 1fr 1fr  ;
+    display: grid;
+    grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr;
     overflow: visible;
-}
+  }
   .Input-style {
     font-size: 20px;
+  }
+
+  .btn-sec h2 {
+    position: static;
+    text-align: center;
   }
 }

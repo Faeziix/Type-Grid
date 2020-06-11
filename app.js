@@ -2,12 +2,14 @@ import * as TypesData from "./Data.js";
 let Types = TypesData.default;
 const button = document.querySelectorAll(".btn");
 let TypeName = document.querySelectorAll(".TypeName");
+let number = document.querySelectorAll(".number");
 
 let NewTypes = [];
 
 button.forEach((btns) => {
   btns.addEventListener("click", () => {
     console.clear();
+    btns.parentElement.lastElementChild.textContent++;
     TypeName.forEach((Name) => {
       Name.classList.remove("color");
     });
