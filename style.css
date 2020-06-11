@@ -100,9 +100,6 @@ Main Setup
   font-family: "signika";
 }
 
-/*=======
-Grid Setup 
-========   */
 
 .Grid {
   height: 71%;
@@ -251,6 +248,10 @@ Type Grid Setup
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr 1fr;
     overflow: visible;
+}
+
+  .Grid {
+    height:100%;
   }
   .Input-style {
     font-size: 20px;
@@ -259,5 +260,8 @@ Type Grid Setup
   .btn-sec h2 {
     position: static;
     text-align: center;
+  }
+  button {
+    padding: 5% 0;
   }
 }
