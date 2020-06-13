@@ -11,14 +11,13 @@ body {
 }
 
 button {
-  color: #494949 !important;
   text-decoration: none;
   background: #ffffff;
   padding: 10% 0;
   border: none;
   display: inline-block;
   transition: all 0.4s ease;
-  width: 100%;
+  /* width: 100%; */
   height: 80%;
   font-size: 2.5em;
   text-align: center;
@@ -30,6 +29,7 @@ button:hover {
   background: #3bc1f6;
   border-color: #3bc1f6 !important;
 }
+
 
 .btn-sec {
   display: flex;
@@ -52,9 +52,11 @@ button:hover {
 
 .color {
   color: red;
-  font-size: 3em !important;
+  font-size: 2.5em !important;
   background-color: white !important;
 }
+
+
 
 /*=======
 Main Setup 
@@ -79,8 +81,10 @@ Main Setup
   border-bottom: solid;
   display: grid;
   grid-template-columns: 90% auto;
-  justify-content: space-between;
+  /*! justify-content: space-between; */
+  /*! padding: 7px 0; */
 }
+
 .reset {
   height: 100%;
   padding: 10px;
@@ -98,21 +102,20 @@ Main Setup
   padding-left: 20px;
   text-transform: capitalize;
   font-family: "signika";
+  margin: 0px;
 }
 
 
 .Grid {
   height: 71%;
-  /*! margin: -1px; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(4, 1fr);
   grid-area: mainbar;
   text-align: right;
   align-content: center;
   align-self: center;
-  width: 100%;
-  /*! border: ; */
+  width: 100%;  
 }
 .section1,
 .section2 {
@@ -143,13 +146,11 @@ Type Grid Setup
   height: 100%;
   justify-content: space-between;
   font-size: 17px;
+
 }
 
 .TypeName {
   padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: bold;
   text-align: center;
   font-family: sans-serif;
@@ -160,17 +161,14 @@ Type Grid Setup
 .Type-Des {
   align-self: center;
   font-size: 1.4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-family: "signika";
   font-weight: inherit;
 }
 
 .Type-CF-container {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  height: 25%;
+  display: flex;
+  height: 22%;
 }
 
 .CF {
@@ -180,6 +178,7 @@ Type Grid Setup
   color: white;
   text-align: center;
   padding: 3px 4px;
+  flex-grow: 1;
 }
 
 .CF h2 {
@@ -245,9 +244,10 @@ Type Grid Setup
   .TypeGrid-Setup {
     display: grid;
     grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR";
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-columns: repeat(2, 1fr);
     overflow: visible;
+    padding: 1% 3%;
 }
 
   .Grid {
@@ -260,8 +260,14 @@ Type Grid Setup
   .btn-sec h2 {
     position: static;
     text-align: center;
+    font-size: 1em;
   }
   button {
     padding: 5% 0;
+    font-size: 1.5em;
+  }
+
+  .type {
+    font-size: 10px;
   }
 }
