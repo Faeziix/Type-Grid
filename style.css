@@ -22,9 +22,8 @@ button {
   text-align: center;
   /*! margin: auto; */
   font-weight: 300;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    flex: 0 0 47%;
-
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  flex: 0 0 47%;
 }
 
 button:hover {
@@ -33,10 +32,6 @@ button:hover {
   border-color: #3bc1f6 !important;
 }
 
-
-
-
-
 /* Added when button clicked */
 
 .color {
@@ -44,8 +39,6 @@ button:hover {
   font-size: 2.5em !important;
   background-color: white !important;
 }
-
-
 
 /*=======
 Main Setup 
@@ -94,7 +87,6 @@ Main Setup
   margin: 0px;
 }
 
-
 .Grid {
   height: 71%;
   display: grid;
@@ -104,7 +96,7 @@ Main Setup
   text-align: right;
   align-content: center;
   align-self: center;
-  width: 100%;  
+  width: 100%;
 }
 .section1,
 .section2 {
@@ -135,7 +127,6 @@ Type Grid Setup
   height: 100%;
   justify-content: space-between;
   font-size: 17px;
-
 }
 
 .TypeName {
@@ -232,15 +223,15 @@ Type Grid Setup
   position: absolute;
   text-align: center;
   bottom: 64px;
-  margin:10px;
+  left: 25%;
+  margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size:1.5em;
+  font-size: 1.5em;
 }
 
 span {
   text-decoration: underline;
   color: red;
-
 }
 
 @media only screen and (max-width: 1100px) {
@@ -251,10 +242,10 @@ span {
     grid-template-columns: repeat(2, 1fr);
     overflow: visible;
     padding: 1% 3%;
-}
+  }
 
   .Grid {
-    height:100%;
+    height: 100%;
   }
   .Input-style {
     font-size: 20px;
@@ -275,7 +266,8 @@ span {
   }
 
   .Footer {
-    bottom: 0;
+    left: 0;
     font-size: 1em;
+    bottom: 0;
   }
 }
