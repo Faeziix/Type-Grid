@@ -258,7 +258,7 @@ span {
   }
   button {
     padding: 5% 0;
-    font-size: clamp(1.5em, 2.5vw, 2em);
+    font-size: 2em;
   }
 
   .type {
