@@ -1,22 +1,52 @@
 const button = document.querySelectorAll(".btn");
 let TypeName = document.querySelectorAll(".TypeName");
 const resetBtn = document.querySelector(".reset");
+const allTypes = [
+  "ESTJ",
+  "ESTP",
+  "ENTJ",
+  "ENFJ",
+  "ESFJ",
+  "ESFP",
+  "ENTP",
+  "ENFP",
+  "ISTJ",
+  "ISTP",
+  "INTJ",
+  "INFJ",
+  "ISFJ",
+  "ISFP",
+  "INTP",
+  "INFP",
+];
+let newType = allTypes;
 
 async function idk() {
-  let type = await (await fetch("./Data2.json")).json();
-  console.log(type.Direct.diff(type.Initiating))
+  return await (await fetch("./Data2.json")).json();
+}
+
+idk().then((type) => {
   button.forEach((btns) => {
     btns.addEventListener("click", () => {
-      console.time("total");
-      TypeName.forEach((i) => i.classList.remove("color"));
-      type[btns.textContent].forEach((i) => {
-        document.querySelector(`.${i}`).classList.add("color");
-      });
-      console.timeEnd("total");
+      newType = newType.diff(type[btns.textContent]);
+      filteredType(newType);
     });
   });
+});
+
+resetBtn.addEventListener("click", () => {
+  TypeName.forEach((i) => i.classList.remove("color"));
+  newType = allTypes;
+});
+
+function filteredType(arr) {
+  TypeName.forEach((i) => i.classList.remove("color"));
+  arr.forEach((i) => document.querySelector(`.${i}`).classList.add("color"));
+  if (arr.length === 0) {
+    alert(`there is no type with this attributes`);
+    newType = allTypes;
+  }
 }
-idk();
 
 Array.prototype.diff = function (arr2) {
   var ret = [];
@@ -29,7 +59,3 @@ Array.prototype.diff = function (arr2) {
   }
   return ret;
 };
-
-resetBtn.addEventListener("click", () => {
-  TypeName.forEach((i) => i.classList.remove("color"));
-});
