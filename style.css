@@ -222,7 +222,7 @@ Type Grid Setup
 .Footer {
   position: absolute;
   text-align: center;
-  bottom: 64px;
+  bottom: 5%;
   left: 25%;
   margin: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -266,6 +266,7 @@ span {
   }
 
   .Footer {
+    position: relative;
     left: 0;
     font-size: 1em;
     bottom: 0;
