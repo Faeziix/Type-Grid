@@ -7,7 +7,7 @@
 body {
   min-height: 100vh;
   width: 100vw;
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 button {
@@ -17,14 +17,11 @@ button {
   border: none;
   display: inline-block;
   transition: all 0.4s ease;
-  /* width: 50%; */
   font-size: 2.5em;
   text-align: center;
-  /*! margin: auto; */
   font-weight: 300;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    flex: 0 0 47%;
-
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  flex: 0 0 47%;
 }
 
 button:hover {
@@ -32,10 +29,6 @@ button:hover {
   background: #3bc1f6;
   border-color: #3bc1f6 !important;
 }
-
-
-
-
 
 /* Added when button clicked */
 
@@ -45,15 +38,13 @@ button:hover {
   background-color: white !important;
 }
 
-
-
 /*=======
 Main Setup 
 ======     */
 
 .TypeGrid-Setup {
   display: grid;
-  grid-template-areas: "namebar namebar namebar" "sidebarL mainbar sidebarR ";
+  grid-template-areas: "namebar namebar namebar" "sidebarL mainbar sidebarR " "Footer Footer Footer";
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 10% 1fr;
   width: 100vw;
@@ -94,7 +85,6 @@ Main Setup
   margin: 0px;
 }
 
-
 .Grid {
   height: 71%;
   display: grid;
@@ -104,7 +94,7 @@ Main Setup
   text-align: right;
   align-content: center;
   align-self: center;
-  width: 100%;  
+  width: 100%;
 }
 .section1,
 .section2 {
@@ -135,7 +125,6 @@ Type Grid Setup
   height: 100%;
   justify-content: space-between;
   font-size: 17px;
-
 }
 
 .TypeName {
@@ -229,32 +218,34 @@ Type Grid Setup
 }
 
 .Footer {
-  position: absolute;
+  grid-area: Footer;
+  width: 100%;
+  margin: 10px;
   text-align: center;
-  bottom: 64px;
-  margin:10px;
+}
+
+.Footer h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size:1.5em;
+  font-size: 2em;
 }
 
 span {
   text-decoration: underline;
   color: red;
-
 }
 
 @media only screen and (max-width: 1100px) {
   .TypeGrid-Setup {
     display: grid;
-    grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR";
-    grid-template-rows: 50px auto auto;
+    grid-template-areas: "namebar namebar " " mainbar mainbar " " sidebarL  sidebarR" "Footer Footer";
+    grid-template-rows: 50px auto auto 20px;
     grid-template-columns: repeat(2, 1fr);
     overflow: visible;
     padding: 1% 3%;
-}
+  }
 
   .Grid {
-    height:100%;
+    height: 100%;
   }
   .Input-style {
     font-size: 20px;
@@ -267,7 +258,7 @@ span {
   }
   button {
     padding: 5% 0;
-    font-size: 1.5em;
+    font-size: clamp(1.5em, 2.5vw, 2em);
   }
 
   .type {
@@ -275,7 +266,7 @@ span {
   }
 
   .Footer {
-    bottom: 0;
-    font-size: 1em;
+    grid-area: Footer;
+    font-size: 75%;
   }
 }
