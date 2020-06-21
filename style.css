@@ -278,4 +278,7 @@ span {
     grid-area: Footer;
     font-size: 75%;
   }
+  .btnClick {
+    font-size: 1.5em;
+  }
 }
