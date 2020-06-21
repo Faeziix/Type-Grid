@@ -34,11 +34,6 @@ idk().then((type) => {
   });
 });
 
-resetBtn.addEventListener("click", () => {
-  TypeName.forEach((i) => i.classList.remove("color"));
-  newType = allTypes;
-});
-
 function filteredType(arr) {
   TypeName.forEach((i) => i.classList.remove("color"));
   arr.forEach((i) => document.querySelector(`.${i}`).classList.add("color"));
@@ -48,14 +43,19 @@ function filteredType(arr) {
   }
 }
 
-Array.prototype.diff = function (arr2) {
+Array.prototype.diff = arr2 => {
   var ret = [];
   this.sort();
   arr2.sort();
-  for (var i = 0; i < this.length; i += 1) {
+  for (var i = 0; i < this.length; i++) {
     if (arr2.indexOf(this[i]) > -1) {
       ret.push(this[i]);
     }
   }
   return ret;
 };
+
+resetBtn.addEventListener("click", () => {
+  TypeName.forEach((i) => i.classList.remove("color"));
+  newType = allTypes;
+});
