@@ -29,6 +29,7 @@ idk().then((type) => {
   button.forEach((btns) => {
     btns.addEventListener("click", () => {
       newType = newType.diff(type[btns.textContent]);
+      btns.classList.add("btnClick");
       filteredType(newType);
     });
   });
@@ -40,10 +41,11 @@ function filteredType(arr) {
   if (arr.length === 0) {
     alert(`there is no type with this attributes`);
     newType = allTypes;
+    button.forEach((btns) => btns.classList.remove("btnClick"));
   }
 }
 
-Array.prototype.diff = arr2 => {
+Array.prototype.diff = function (arr2) {
   var ret = [];
   this.sort();
   arr2.sort();
@@ -58,4 +60,5 @@ Array.prototype.diff = arr2 => {
 resetBtn.addEventListener("click", () => {
   TypeName.forEach((i) => i.classList.remove("color"));
   newType = allTypes;
+  button.forEach((btns) => btns.classList.remove("btnClick"));
 });
