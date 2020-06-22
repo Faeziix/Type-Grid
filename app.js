@@ -1,7 +1,4 @@
-const button = document.querySelectorAll(".btn");
-let TypeName = document.querySelectorAll(".TypeName");
-const resetBtn = document.querySelector(".reset");
-const allTypes = [
+const TypeNames = [
   "ESTJ",
   "ESTP",
   "ENTJ",
@@ -19,46 +16,35 @@ const allTypes = [
   "INTP",
   "INFP",
 ];
-let newType = allTypes;
+const button = document.querySelectorAll(".btn");
+let GridTypes = document.querySelectorAll(".TypeName");
+const resetBtn = document.querySelector(".reset");
+let newType = TypeNames;
 
-async function idk() {
-  return await (await fetch("./Data2.json")).json();
-}
-
-idk().then((type) => {
+(async function idk() {
+  const type = await (await fetch("./Data2.json")).json();
   button.forEach((btns) => {
     btns.addEventListener("click", () => {
-      newType = newType.diff(type[btns.textContent]);
       btns.classList.add("btnClick");
-      filteredType(newType);
+      let btnName = btns.textContent;
+      newType = newType.filter((e) => type[btnName].includes(e));
+      filterTypes(newType);
+      if (!newType.length) {
+        alert(`there is no type with this attributes`);
+        newType = TypeNames;
+        button.forEach((btns) => btns.classList.remove("btnClick"));
+      }
     });
   });
-});
+})();
 
-function filteredType(arr) {
-  TypeName.forEach((i) => i.classList.remove("color"));
+function filterTypes(arr) {
+  GridTypes.forEach((i) => i.classList.remove("color"));
   arr.forEach((i) => document.querySelector(`.${i}`).classList.add("color"));
-  if (arr.length === 0) {
-    alert(`there is no type with this attributes`);
-    newType = allTypes;
-    button.forEach((btns) => btns.classList.remove("btnClick"));
-  }
 }
 
-Array.prototype.diff = function (arr2) {
-  var ret = [];
-  this.sort();
-  arr2.sort();
-  for (var i = 0; i < this.length; i++) {
-    if (arr2.indexOf(this[i]) > -1) {
-      ret.push(this[i]);
-    }
-  }
-  return ret;
-};
-
 resetBtn.addEventListener("click", () => {
-  TypeName.forEach((i) => i.classList.remove("color"));
-  newType = allTypes;
+  GridTypes.forEach((i) => i.classList.remove("color"));
+  newType = TypeNames;
   button.forEach((btns) => btns.classList.remove("btnClick"));
 });
