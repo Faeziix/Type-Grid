@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -37,7 +37,7 @@ button:hover {
   color: #ffffff !important;
   background: #ff2a2a;
   border-color: #3bc1f6 !important;
-  font-size: 2.75em;
+
   box-shadow: -5px 5px 0px black;
 }
 
@@ -236,12 +236,11 @@ Type Grid Setup
 }
 
 .Footer h1 {
-  
   font-size: 2em;
 }
 
 span {
-  font-family: 'UnifrakturCook', cursive;
+  font-family: "UnifrakturCook", cursive;
   font-size: 2.2em;
   text-decoration: underline;
   color: rgba(255, 0, 0, 0.89);
@@ -282,8 +281,5 @@ span {
   .Footer {
     grid-area: Footer;
     font-size: 75%;
-  }
-  .btnClick {
-    font-size: 1.5em;
   }
 }
