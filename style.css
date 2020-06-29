@@ -10,21 +10,21 @@ body {
   min-height: 100vh;
   width: 100vw;
   font-size: 62.5%;
+  font-family: sans-serif;
 }
 
 button {
-  text-decoration: none;
-  background: #ffffff;
-  padding: 8% 0;
-  border: none;
-  border-radius: 5px;
-  display: inline-block;
-  transition: all 0.4s ease;
-  font-size: 2.5em;
-  text-align: center;
   font-weight: 300;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  flex: 0 0 47%;
+  text-align: center;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+  border: none;
+  padding: 8% 0;
+  background: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2.5em;
 }
 
 button:hover {
@@ -33,6 +33,11 @@ button:hover {
   border-color: #3bc1f6 !important;
 }
 
+.btn {
+  flex: 0 0 47%;
+}
+
+/* button click effect*/
 .btnClick {
   color: #ffffff !important;
   background: #ff2a2a;
@@ -40,7 +45,7 @@ button:hover {
   box-shadow: -5px 5px 0px black;
 }
 
-/* Added when button clicked */
+/* Added to type when button clicked */
 
 .color {
   color: red;
@@ -70,17 +75,17 @@ Main Setup
   width: 100%;
   border-bottom: solid;
   display: grid;
-  grid-template-columns: 90% auto;
-  /*! justify-content: space-between; */
-  /*! padding: 7px 0; */
+  grid-template-columns: 6fr 1fr 1fr;
 }
 
-.reset {
+#Submit {
+  cursor: not-allowed;;
+}
+
+.reset, #Submit {
   height: 100%;
-  padding: 10px;
   width: 100%;
-  position: relative;
-  right: 30px;
+  padding: 8%;
 }
 
 .Input-style {
@@ -141,7 +146,6 @@ Type Grid Setup
   padding: 8px;
   font-weight: bold;
   text-align: center;
-  font-family: sans-serif;
   transition: ease-in-out all 0.4s;
   font-size: 2.3em;
 }
@@ -245,6 +249,48 @@ span {
   text-shadow: rgb(90, 61, 61) 0px 2px 2px;
 }
 
+.result {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.resultDisplay {
+  display: flex;
+}
+
+.result div {
+  height: 60%;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 1);
+  display: grid;
+  grid-template-areas: 'text text' 'button button';
+  justify-content: center;
+  flex-flow: wrap row;
+  align-content: space-evenly ;
+}
+
+.result h1 {
+  margin-bottom: 10px;
+  grid-area: text;
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+  font-size: 2.5em;
+  width: 100%;
+}
+
+.result div button {
+  padding: 10px 30px;
+  margin: 10px;
+}
+
 @media only screen and (max-width: 1100px) {
   .TypeGrid-Setup {
     display: grid;
@@ -279,5 +325,10 @@ span {
   .Footer {
     grid-area: Footer;
     font-size: 75%;
+  }
+
+  .result div {
+    width: 90%;
+    height: 25%;
   }
 }
