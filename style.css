@@ -79,10 +79,11 @@ Main Setup
 }
 
 #Submit {
-  cursor: not-allowed;;
+  cursor: not-allowed;
 }
 
-.reset, #Submit {
+.reset,
+#Submit {
   height: 100%;
   width: 100%;
   padding: 8%;
@@ -253,7 +254,7 @@ span {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.116);
   z-index: 10;
   display: none;
   justify-content: center;
@@ -266,29 +267,31 @@ span {
 }
 
 .result div {
-  height: 60%;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 1);
+  height: 30%;
+  width: 30%;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
   display: grid;
-  grid-template-areas: 'text text' 'button button';
+  grid-template-areas: "text text" "button button";
   justify-content: center;
-  flex-flow: wrap row;
-  align-content: space-evenly ;
+  align-content: space-evenly;
+  box-shadow: 0 5px 10px black;
 }
 
-.result h1 {
+#result-text {
+  color: black;
   margin-bottom: 10px;
   grid-area: text;
   text-transform: capitalize;
   text-align: center;
-  color: white;
-  font-size: 2.5em;
+  font-size: 3.5em;
   width: 100%;
 }
 
 .result div button {
   padding: 10px 30px;
   margin: 10px;
+  border: solid black;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -328,7 +331,11 @@ span {
   }
 
   .result div {
-    width: 90%;
+    width: 350px;
     height: 25%;
+  }
+
+  #result-text {
+    font-size: 2.5em;
   }
 }
