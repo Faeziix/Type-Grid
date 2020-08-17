@@ -70,17 +70,18 @@ Main Setup
   width: 100%;
   border-bottom: solid;
   display: grid;
-  grid-template-columns: 90% auto;
+  position: relative;
+  /* grid-template-columns: 90% auto; */
   /*! justify-content: space-between; */
   /*! padding: 7px 0; */
 }
 
 .reset {
   height: 100%;
+  width: 20%;
   padding: 10px;
-  width: 100%;
-  position: relative;
-  right: 30px;
+  position: absolute;
+  right: 0;
 }
 
 .Input-style {
