@@ -153,6 +153,7 @@ Type Grid Setup
   text-align: center;
   font-family: "signika";
   font-weight: inherit;
+  /* margin: 2px; */
 }
 
 .Type-CF-container {
@@ -166,11 +167,11 @@ Type Grid Setup
   display: flex;
   color: white;
   text-align: center;
-  padding: 3px 4px;
   flex-grow: 1;
 }
 
 .CF h2 {
+  padding:3px;
   font-size: 1.2em;
   font-family: Helvetica, sans-serif;
   font-weight: lighter;
@@ -259,9 +260,10 @@ span {
   .Grid {
     height: 100%;
   }
-  .Input-style {
+
+  /* .Input-style {
     font-size: 20px;
-  }
+  } */
 
   .btn-sec h2 {
     position: static;
@@ -270,7 +272,7 @@ span {
   }
   button {
     padding: 5% 0;
-    font-size: 1.5em;
+    font-size: clamp(1.3em,2vw,2em);
   }
 
   .type {
@@ -281,4 +283,9 @@ span {
     grid-area: Footer;
     font-size: 75%;
   }
+
+  button:hover {
+    background-color: red !important;
+  }
+  
 }
