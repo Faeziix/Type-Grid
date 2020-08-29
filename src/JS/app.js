@@ -60,7 +60,7 @@ function btnClick(btns) {
     });
 
     if (tempType.length === 0) {
-      alert(`there is no type with this attributes`);
+      alert(`there is no type with these attributes`);
       tempType = newType;
       btnClicked.pop();
     } else {
