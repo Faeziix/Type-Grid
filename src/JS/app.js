@@ -2,21 +2,40 @@ import { types } from "./Data2.js";
 
 let newType = TypeNames;
 let tempType;
-
-button.forEach((btns) => {
-  btns.addEventListener("click", () => btnClick(btns));
+let btnClicked = [];
+button.forEach((btn) => {
+  btn.addEventListener("click", () => btnClick(btn));
 });
 
 function btnClick(btns) {
-  tempType = newType.filter((e) => types[btns.textContent].includes(e));
-  colorize(tempType);
-  if (tempType.length === 0) {
-    alert(`there is no type with this attributes`);
-    tempType = newType;
-    colorize(newType);
-  }else {
-    newType = tempType
-    btns.classList.add("btnClick");
+  if (!btnClicked.includes(btns.textContent)) {
+    btnClicked.push(btns.textContent);
+
+    btnClicked.forEach((i) => {
+      tempType = newType.filter((e) => types[i].includes(e));
+    });
+
+    if (tempType.length === 0) {
+      alert(`there is no type with this attributes`);
+      tempType = newType;
+      btnClicked.pop();
+    } else {
+      newType = tempType;
+      colorize(tempType);
+      btns.classList.toggle("btnClick");
+    }
+  } else {
+    btnClicked.splice(btnClicked.indexOf(btns.textContent), 1);
+    newType = TypeNames;
+    btnClicked.forEach((i) => {
+      newType = newType.filter((e) => types[i].includes(e));
+    });
+    if (newType.length === 16) {
+      GridTypes.forEach((i) => i.classList.remove("color"));
+    } else {
+      colorize(newType);
+    }
+    btns.classList.toggle("btnClick");
   }
 }
 
@@ -27,6 +46,7 @@ function colorize(arr) {
 
 resetBtn.addEventListener("click", () => {
   GridTypes.forEach((i) => i.classList.remove("color"));
-  newType = TypeNames;
   button.forEach((btns) => btns.classList.remove("btnClick"));
+  newType = TypeNames;
+  btnClicked = [];
 });
