@@ -27,11 +27,7 @@ button {
   flex: 0 0 47%;
 }
 
-button:hover {
-  color: #ffffff !important;
-  background: #3bc1f6;
-  border-color: #3bc1f6 !important;
-}
+
 
 .btnClick {
   color: #ffffff !important;
@@ -247,6 +243,14 @@ span {
   text-shadow: rgb(90, 61, 61) 0px 2px 2px;
 }
 
+@media only screen and (min-width: 1100px){
+  button:hover {
+    color: #ffffff !important;
+    background: #3bc1f6;
+    border-color: #3bc1f6 !important;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .TypeGrid-Setup {
     display: grid;
@@ -282,10 +286,6 @@ span {
   .Footer {
     grid-area: Footer;
     font-size: 75%;
-  }
-
-  button:hover {
-    background-color: red !important;
   }
   
 }
