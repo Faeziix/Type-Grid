@@ -21,32 +21,32 @@ let types = {
   Philosopher: ["ESTJ", "ENFP", "ISTJ", "INFP"],
 };
 const TypeNames = [
-"ESTJ",
-"ESTP",
-"ENTJ",
-"ENFJ",
-"ESFJ",
-"ESFP",
-"ENTP",
-"ENFP",
-"ISTJ",
-"ISTP",
-"INTJ",
-"INFJ",
-"ISFJ",
-"ISFP",
-"INTP",
-"INFP",
+  "ESTJ",
+  "ESTP",
+  "ENTJ",
+  "ENFJ",
+  "ESFJ",
+  "ESFP",
+  "ENTP",
+  "ENFP",
+  "ISTJ",
+  "ISTP",
+  "INTJ",
+  "INFJ",
+  "ISFJ",
+  "ISFP",
+  "INTP",
+  "INFP",
 ];
 
 const resetBtn = document.querySelector(".reset");
 const button = document.querySelectorAll(".btn");
 let GridTypes = document.querySelectorAll(".TypeName");
 
-
 let newType = TypeNames;
 let tempType;
 let btnClicked = [];
+
 button.forEach((btn) => {
   btn.addEventListener("click", () => btnClick(btn));
 });
