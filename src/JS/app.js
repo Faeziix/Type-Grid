@@ -1,4 +1,4 @@
-import types from "./Data2.js";
+// import types from "./Data2.js";
 import anime from "../../node_modules/animejs/lib/anime.es.js";
 
 const button = document.querySelectorAll(".btn");
@@ -58,10 +58,8 @@ resetBtn.addEventListener("click", () => {
 function animation(target) {
   anime({
     targets: target,
-    duration: 200,
+    duration: 400,
     keyframes: [
-      { translateX: 100 },
-      { translateX: -100 },
       { translateX: 100 },
       { translateX: -100 },
       { translateX: 100 },
