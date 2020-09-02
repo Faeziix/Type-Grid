@@ -1,6 +1,6 @@
 const resetBtn = document.querySelector(".reset");
 let GridTypes = document.querySelectorAll(".TypeName");
-const TypeNames = [
+export const TypeNames = [
   "ESTJ",
   "ESTP",
   "ENTJ",
@@ -19,7 +19,7 @@ const TypeNames = [
   "INFP",
 ];
 
-let types = {
+ export let types = {
   Direct: ["ESTJ", "ESTP", "ENTJ", "ENFJ", "ISTJ", "ISTP", "INTJ", "INFJ"],
   Informative: ["ESFJ", "ESFP", "ENTP", "ENFP", "ISFJ", "ISFP", "INTP", "INFP"],
   Initiating: ["ESTJ", "ESTP", "ENTJ", "ENFJ", "ESFJ", "ESFP", "ENTP", "ENFP"],
@@ -41,3 +41,4 @@ let types = {
   Wayfarer: ["ENTJ", "ESFP", "INTJ", "ISFP"],
   Philosopher: ["ESTJ", "ENFP", "ISTJ", "INFP"],
 };
+
