@@ -1,4 +1,4 @@
-export let types = {
+ let types = {
   Direct: ["ESTJ", "ESTP", "ENTJ", "ENFJ", "ISTJ", "ISTP", "INTJ", "INFJ"],
   Informative: ["ESFJ", "ESFP", "ENTP", "ENFP", "ISFJ", "ISFP", "INTP", "INFP"],
   Initiating: ["ESTJ", "ESTP", "ENTJ", "ENFJ", "ESFJ", "ESFP", "ENTP", "ENFP"],
@@ -20,3 +20,5 @@ export let types = {
   Wayfarer: ["ENTJ", "ESFP", "INTJ", "ISFP"],
   Philosopher: ["ESTJ", "ENFP", "ISTJ", "INFP"],
 };
+
+export default types
